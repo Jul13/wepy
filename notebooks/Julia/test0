@@ -1,0 +1,16 @@
+# ECOS optimizer: ETH
+Pkg.add("ECOS")
+# SCS optimizer: Stanford splitting
+Pkg.add("SCS")
+
+# Optimization functions for Julia
+Pkg.add("Optim")
+
+# Convex Disciplined Programming
+Pkg.add("Convex")
+
+# Modeling language for Mathematical Programming
+Pkg.add("JuMP")
+
+# simple curve fitting (least squares)
+Pkg.add("LsqFit")

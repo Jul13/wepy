@@ -1,0 +1,9 @@
+This folder contains sample python scripts intended to help the reader learn python. We provide only scripts as it is
+ as convenient as notebooks and avoids problems with version control.
+
+The setup you should use to test scripts is a matlab-like interface like PyCharm immediate execution of selection
+(Alt+Maj+E).
+
+You can start by opening 'lean-matplotlib.py FIRST' in PyCharm and execute it line by line (Control+Shift+E, you may
+add F9 shortcut if you are used to matlab).
+Then numpy and pandas are both asking whether they might be SECOND.

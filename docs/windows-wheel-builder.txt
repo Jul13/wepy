@@ -1,0 +1,13 @@
+cls
+echo "Julien is happy to great you to this friendly win-python wheel builder"
+SET WHEELS="G:\Public\JR\Py35\wheels-windows"
+SET DEV_DRIVE=c:
+SET DEV="c:\dev"
+SET PY_ENV=py35
+
+activate %PY_ENV%
+:: you should have already copied Gohlke's compiled lib to the deployment folder
+:: http://www.lfd.uci.edu/~gohlke/pythonlibs/
+pip wheel -w %WHEELS% --use-wheel -f %WHEELS% -r %dev%/PyBam/shared_library/requirements.txt
+pip wheel -w %WHEELS% --use-wheel -f %WHEELS% %DEV%\PyBam\btLibs\pmorissette\ffn\
+pip wheel -w %WHEELS% --use-wheel -f %WHEELS% %DEV%\PyBam\btLibs\pmorissette\bt\

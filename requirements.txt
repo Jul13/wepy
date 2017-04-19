@@ -1,0 +1,44 @@
+# core programming packages
+ipython   # for jupyter
+ipykernel # for jupyter
+jupyter   # jupyter itself
+environment_kernels # to use only on posix (clone the library else)
+cython    # to speedup progams
+numba     # add jit support
+
+# for nice coding standards
+nose      # unit tests
+coverage  # coverage of unit tests
+pep8      # to ensure python style is respected (for atom)
+flake8    # to ensure python style is respected (for atom)
+flake8-docstrings
+jedi      # autocompletion package (for atom)
+
+# io packages
+bs4       # Beautiful Soup: HTML and XML
+h5py      # HDF5 binary data
+html5lib  # as it reads !
+dotmap    # dictionaries where . replaces []
+
+# data management
+tables
+pandas
+openpyxl
+
+# maths packages
+numpy
+scipy
+scikit-learn    # ML algorithms
+matplotlib      # graphics
+statsmodels     # statistics
+pykalman        # a kalman filter
+
+
+# all this has to be done mostly manually depending on the OS !
+# it is necessary to install ecos before cvxpy under windows even if it is a dependency ! and ECOS requires numpy first
+ecos
+cvxpy           # SOCP optimizer => special install for windows !
+# for windows you also require CVXcanon, cvxopt, scs
+# Go to Christopher Gohlke's page for compiled whl files.
+# http://www.lfd.uci.edu/~gohlke/pythonlibs/#cvxopt
+# and put the already built anywhere; pip install yourfiles.whl will install everybody
