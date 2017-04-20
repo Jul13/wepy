@@ -12,7 +12,7 @@ import wepy.configuration  as cf
 import json
 import os
 import re
-# from pprint import pprint
+from pprint import pprint
 import dotmap
 
 # The file location that is in our config file
@@ -27,15 +27,23 @@ len(list_files)
 
 # loads a particular file
 data_file = open(path_trips + list_files[0])
+
 # this builds a dictionnary from the json file
-data = json.load(data_file)
+data_answer = json.load(data_file)
+data_sent = json.load(open(path_trips + str.replace(list_files[0],
+                                                    'response', 'sent')))
+
+# a first way to print the content
+pprint(data_answer)
+# now data is a regular dictionary accessible like this
+data_answer['fuelEstimation']['co2Emission']
 
 # dotmap transform dictionaries into structure (easier completion)
-simpler = dotmap.DotMap(data)
+simple_answer = dotmap.DotMap(data_answer)
+simple_sent = dotmap.DotMap(data_sent)
+# the somewhat simpler dotmap access:
+simple_answer.fuelEstimation.co2Emission
+simple_answer.fuelEstimation.fuelVolume
 
-simpler.fuelEstimation.co2Emission
-data['fuelEstimation']['co2Emission']
-
-# pprint(data)
-
-# now data is a regular dictionary accessible like this
+print(simple_sent.keys())
+simple_sent.vehicle

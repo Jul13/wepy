@@ -6,6 +6,11 @@ jupyter   # jupyter itself
 cython    # to speedup progams
 numba     # add jit support
 
+# better display
+plotly    # an improved version of matplotlib
+bokeh     # another nice graph packate
+tqdm      # progress-bar
+
 # for nice coding standards
 nose      # unit tests
 coverage  # coverage of unit tests
