@@ -2,7 +2,7 @@
 ipython   # for jupyter
 ipykernel # for jupyter
 jupyter   # jupyter itself
-environment_kernels # to use only on posix (clone the library else)
+# environment_kernels # to use only on posix (clone the library else)
 cython    # to speedup progams
 numba     # add jit support
 
